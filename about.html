@@ -6,27 +6,215 @@
   <title>A2</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
 </head>
-<body>
-     <!--spin on scroll-->
-<div class="wrapper">
-    <div class="circle">
-        <img id="reload" src="img/hot-dog_1f32d.png" alt="scroll">
-    </div>
+<body onload="move('element')">
+
+<!--LOADING PAGE
+<div class="loading-page">
+    <img src="img/keyboard.gif" id="keyboard">
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>-->
+
+
+<!--spin on scroll-->
+<div class="wrapper">
+  <div class="circle">
+      <img id="reload" src="img/hot-dog_1f32d.png" alt="scroll">
+  </div>
+</div>
+      <div id="fact">-->please hire me<--</div>
+      <script>
+        document.getElementById("reload").onclick = function() {
+            var x = document.getElementById("fact")
+            if(x.style.opacity === "0") {
+            x.style.opacity = "100";
+          }
+          else {
+            x.style.opacity = "0";
+          }
+        }
+     </script>
 <script src="main.js"></script>
+
+
+
 <main>
+  <div class="scrollbg">
+    <section>
+      <img src="img/asterisk.png" id="star4_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star5_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star6_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star7_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star8_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star9_home">
+    </section>
+  </div>
+  
+<script>
+window.onscroll = function () {
+    scrollRotate();
+};
+function scrollRotate() {
+    let image = document.getElementById("reload");
+    image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+
+  let section = document.getElementById("star4_home");
+  section.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section1 = document.getElementById("star5_home");
+  section1.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section2 = document.getElementById("star6_home");
+  section2.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section3 = document.getElementById("star7_home");
+  section3.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section4 = document.getElementById("star8_home");
+  section4.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section5 = document.getElementById("star9_home");
+  section5.style.transform = "rotate(" + window.pageYOffset + "deg)";
+}
+</script>
 <header>
 <div class="navbar">
-    <div class="logo"><a id="logo" href="index.html">𐐘™️</a></div>
-    <!--<a href="#" class="action_btn"></a>
+  <div class="logo"><a href="index.html"><img src="img/logo.png" id="logomeo"></a></div>
+  <ul class="links">
+      <li id="dottextnav">
+        <div class="dotnav1"></div>
+        <a id="textnavbar" href="archive.html">Projects</a>
+      </li>
+      <li id="dottextnav">
+        <div class="dotnav2"></div>
+        <a id="textnavbar" href="contact.html">Contact</a>
+      </li>
+    </ul>
     <div class="toggle_btn">
         <i class="fa-solid fa-bars"></i>
-    </div>-->
+    </div>
+</div>
+    
+<div class="dropdown_menu">
+  <li id="dottextnav">
+    <div class="dotnav1"></div>
+    <a id="textnavbar" href="archive.html">Projects</a>
+  </li>
+  <li id="dottextnav">
+    <div class="dotnav2"></div>
+    <a id="textnavbar" href="contact.html">Contact</a>
+  </li>
 </div>
 </header>
 
+
+<script>
+  const toggleBtn = document.querySelector('.toggle_btn')
+  const toggleBtnIcon = document.querySelector('.toggle_btn i')
+  const dropDownMenu = document.querySelector('.dropdown_menu')
+
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $(window).scroll(function(){
+        var $window = $(window),
+        $colorcircle = $('.colorcircle'),
+        $panel = $('.panel');
+
+        var scroll = $window.scrollTop() + ($window.height() / 3);
+        $panel.each(function (){
+            var $this = $(this);
+            if($this.position().top <= scroll &&
+        $this.position().top + $this.height() > scroll){
+            $colorcircle.removeClass(function (index,css){
+                return (css.match (/(^|\s)color-\S+/g) || []).join('');
+            });
+            $colorcircle.addClass('color-' + $(this).data('color'));
+        }
+        });
+    }).scroll();
+</script>
+
+<div class="colorcirclefront"></div>
+<div class="colorcircle"></div>
+
+<div class="panel" data-color="white">
+
+<div class="grid2">
+  <div id="intro">
+    <img src="img/hii.gif" id="smallabout">
+    <!--<i id="hilets">hi<br>-->
+    <i id="j">
+      <span id="gettoknow"><i id="arrow">⤷</i>
+      let's get to know</span>
+    </i> 
+    <!--<i id="gettoknow">get to<br>
+      <i id="j">
+        <i id="arrow">↙</i>
+        know</i>
+    </i>-->
+    <div id="changetext">
+      <!--<i id="arrow">↘</i>-->
+    <i id="blur">me:)</i>
+    </div>
+    <img src="img/blink.gif" id="smallabout2">
+    
+  </div>
+  <img src="img/aboutclip.gif" id="aboutclip">
+  <img src="img/grass2_1.gif" id="grass">
+</div>
+</div>
+
+<script>
+document.getElementById("blur").onclick = function() {
+var changeText = document.getElementById("blur")
+
+  if (changeText.textContent == 'me:)') {
+     changeText.textContent = "minh";
+     changeText.style.color = "#ff20e1";
+ }
+  else if (changeText.textContent =='minh') {
+     changeText.textContent = "them";
+     changeText.style.color = "#ff20e1";
+ }
+ else if (changeText.textContent =='them') {
+     changeText.textContent = "her";
+     changeText.style.color = "#ff20e1";
+ }
+ else if (changeText.textContent =='her') {
+     changeText.textContent = "me:)";
+     changeText.style.color = "black";
+ }
+
+}
+</script>
+<!--<img src="img/aboutbasebitmap.png" id="abouttext">-->
+
 <!--FLIPCARD-->
+
+<div class="panel" id ="panel" data-color="indigo">
     <div class="flip-card">
         <div class="flip-card__front-side">
         <div class="cccd">
@@ -49,8 +237,85 @@
         </div>
         </div>
         <div class="flip-card__back-side">
-            i eat kids
+            <p id="intro_flippcard">As an individual with a passion for artistic expression, I am a creative student seeking opportunities to expand my knowledge and push the limits of my craft. Also, I can work under pressure efficiently, yet possess a teamwork spirit. I am particularly inclined toward tattooing, 3d modeling, and a keen interest in photography.</p>
         </div>
     </div>
+  <div>
+</div>     
+</div>
+
+<div class="panel" id="panel" data-color="violet">
+<section class="grid_abt">
+<img src="img/snail.gif" id="face">
+<div id="intro_logos">
+<div id="introduction">
+
+<p id="keyword">🪆blending 3D and 2D art</p>
+
+<p id="keyword">🛝I do experimental for fun with no actual meaning</p>
+
+<p id="keyword">💻my main inspirations are net.art and computers</p>
+
+<p id="keyword">🧿use eyes to capture the moment and use brain to memorize</p>
+
+<p id="keyword">🚸my works usually reflect my perceptions and inner feelings</p>
+</div>
+
+<div class="logos">
+<img src="img/Adobe_Photoshop_CC_icon.svg.png" id="logo">
+<img src="img/ai.png" id="logo">
+<img src="img/id.png" id="logo">
+<img src="img/ae.png" id="logo">
+<img src="img/pr.png" id="logo">
+<img src="img/davinci.png" id="logo">
+<img src="img/Blender_logo.png" id="logo">
+<img src="img/touch.png" id="logo">
+<img src="img/Figma-logo.svg.png" id="logo">
+<img src="img/visualcode.png" id="logo">
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="stock-ticker">
+  <ul aria-hidden="true">
+    <li>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+    </li>
+    <li>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+    </li>
+    <li>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+    </li>
+  </ul>
+  <ul aria-hidden="true">
+    <li>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+    </li>
+    <li>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+    </li>
+    <li>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+        <span id="account">@nhetminh</span>
+    </li>
+  </ul>
+</div>
+</footer>
+
 </body>
 </html>

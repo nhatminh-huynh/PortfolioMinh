@@ -6,81 +6,309 @@
   <title>A2</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
 </head>
-<body>
-    <!--spin on scroll-->
-<div class="wrapper">
-        <div class="circle">
-            <img id="reload" src="img/hot-dog_1f32d.png" alt="scroll">
-        </div>
+<body onload="move('element')">
+
+<!--LOADING PAGE
+<div class="loading-page">
+    <img src="img/keyboard.gif" id="keyboard">
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>-->
+
+
+<!--spin on scroll-->
+<div class="wrapper">
+  <div class="circle">
+      <img id="reload" src="img/hot-dog_1f32d.png" alt="scroll">
+  </div>
+</div>
+      <div id="fact">-->please hire me<--</div>
+      <script>
+        document.getElementById("reload").onclick = function() {
+            var x = document.getElementById("fact")
+            if(x.style.opacity === "0") {
+            x.style.opacity = "100";
+          }
+          else {
+            x.style.opacity = "0";
+          }
+        }
+     </script>
 <script src="main.js"></script>
+
+
 <main>
+  <div class="scrollbg">
+    <section>
+      <img src="img/asterisk.png" id="star4_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star5_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star6_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star7_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star8_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star9_home">
+    </section>
+  </div>
+  
+<script>
+window.onscroll = function () {
+    scrollRotate();
+};
+function scrollRotate() {
+    let image = document.getElementById("reload");
+    image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+
+  let section = document.getElementById("star4_home");
+  section.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section1 = document.getElementById("star5_home");
+  section1.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section2 = document.getElementById("star6_home");
+  section2.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section3 = document.getElementById("star7_home");
+  section3.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section4 = document.getElementById("star8_home");
+  section4.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section5 = document.getElementById("star9_home");
+  section5.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section6 = document.getElementById("star10_home");
+  section6.style.filter = "hue-rotate(" + window.pageYOffset + "deg)";
+}
+</script>
+
+
 <header>
     <div class="navbar">
-        <div class="logo"><a id="logo" href="index.html">𐐘™️</a></div>
+        <div class="logo"><a href="index.html"><img src="img/logo.png" id="logomeo"></a></div>
         <!--<a href="#" class="action_btn"></a>
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
         </div>-->
     </div>
 </header>
-<div></div>
+
+
+<!--change colors-->
+<div class="colorcirclefront"></div>
+<div class="colorcircle"></div>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $(window).scroll(function(){
+        var $window = $(window),
+        $colorcircle = $('.colorcircle'),
+        $panel = $('.panel');
+
+        var scroll = $window.scrollTop() + ($window.height() / 3);
+        $panel.each(function (){
+            var $this = $(this);
+            if($this.position().top <= scroll &&
+        $this.position().top + $this.height() > scroll){
+            $colorcircle.removeClass(function (index,css){
+                return (css.match (/(^|\s)color-\S+/g) || []).join('');
+            });
+            $colorcircle.addClass('color-' + $(this).data('color'));
+        }
+        });
+    }).scroll();
+</script>
+<!---->
+
+<div class="panel" data-color="white">
+
+  <div class="firststatement">
+    <img src="img/appleworm.png" id="apple">
+    <img src="img/appleworms.gif" id="worm">
+
+  
+   <h2 id="header">I am an <span id="career">artist</span>/ <span id="career">philosopher</span>/ <span id="career">rock star</span>/ <span id="career">musician</span>/ <span id="career">chef</span>/ <span id="career">murderer</span>/ <span id="career">DJ</span>/ <span id="career">hacker</span>/ <span id="career">rapper</span>/ <span id="career">director</span>/ 
+    <input type="text" placeholder="who you think I am?"> 
+    <br><span id="career3">trapped inside the body of a</span> <br><span id="career2">graphic designer</span>
+   </h2>  
+   <img src="img/spark.png" id="bg_firststatement">
+    <img src="img/bin.png" id="trigger">
+    
+  </div>
+</div>
+
+<script>
+  var h2 = document.getElementById('header');
+
+  function fadeOutOnScroll(element) {
+  if (!element) {
+    return;
+  }
+  
+  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+  var elementHeight = element.offsetHeight;
+  var scrollTop = document.documentElement.scrollTop;
+  
+  var opacity = 1;
+  
+  if (scrollTop > distanceToTop) {
+    opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+  }
+  
+  if (opacity >= 0) {
+    element.style.opacity = opacity;
+  }
+}
+
+function scrollHandler() {
+  fadeOutOnScroll(h2);
+}
+
+window.addEventListener('scroll', scrollHandler);
+</script>
+
+<div class="container appear">
+   <div class="item"><p id="easteregg">(remember to delete the trash)</p></div>
+</div>
+<script>
+      const appear = document.querySelector('.appear'); 
+  const cb = function(entries){
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('inview');
+      }else{
+        entry.target.classList.remove('inview');
+      }
+    });
+  }
+  const io = new IntersectionObserver(cb);
+  io.observe(appear);
+
+window.onscroll = function () {
+    scrollRotate();
+};
+</script>
+
+<div class="panel" id ="panel1" data-color="violet">
     <section class="grid">
         <ul class="links">
             <li id="name1">
                 <img class="folder" src="img/folder.png">
-                <a href="home.html">Home</a> 
+            <div class="dotandtext">
+                <div class="dot1"></div>
+                <a id="texthomepage" href="archive.html">Projects</a> 
+            </div>
             </li>
             <li id="name2">
                 <img class="folder" src="img/folder.png">
-                <a href="about.html">About</a>
+            <div class="dotandtext">
+                <div class="dot2"></div>
+                <a id="texthomepage" href="about.html">About</a>
+            </div>
             </li>
             <li id="name3">
                 <img class="folder" src="img/folder.png">
-                <a href="services">Services</a>
+            <div class="dotandtext">
+                <div class="dot3"></div>
+                <a id="texthomepage" href="contact.html">Contact</a>
+            </div>
             </li>
             <li id="name4">
-                <img  class="computer" src="img/computer.png">
+                <img  class="computer1" src="img/name.gif">
+                <img  class="computer" src="img/computer_light.png">
             </li>
         </ul>
     </section>
+</div>
 
+<div class="panel" data-color="violet">
 <section class="grid1">
     <section class="heading">
-        <h1>🗯</h1>
+      <img src="img/toilet.png" id="toilet">
+
         <div class="test">
-            <p><img id="small" src="img/jellyfish.png"> 
-               <span>intj</span> 
-               <span>2005</span> 
-               <span>montserrat</span>
-               <span>miiiiinh</span>
-               <img id="small1" src="img/xp1.png"> 
-               <span>radiohead</span>
-               <span>cybersigilism</span>
-               <img id="small" src="img/folder.png"> 
-               <span>+</span> 
-               <span>frugiter_aero</span>
+            <p>
+               <img id="small" src="img/jellyfish.png"> 
+               <span id="span">intj</span> 
+               <span id="span">2005</span> 
+               <span id="span">montserrat</span>
+               <img id="small" src="img/sushi_1f363.png"> 
+               <span id="span">rmit</span>
+               <span id="span">cat_person</span>
+               <img id="small" src="img/xp1.png">   
+               <span id="span">cybersigilism</span>
+               <img id="small" src="img/axis.png"> 
+               <span id="span">3dmodel</span> 
+               <span id="span">frugiter_aero</span>
                <img id="small1" src="img/xp.png"> 
-               <span>#beutiful</span>
-               <span>hello_world!</span>
-               <span>rmit</span> 
-               <span>graphic_design</span>
-               <img id="small" src="img/phitieu.png"> 
-               <span>@c0nme0mu</span>
-               <img id="small2" src="img/meomu.png"> 
-               <span>#c00k*</span>
+               <span id="span">net.art</span>
+               <img id="small" src="img/1484942334ios-emoji-personal-computer.png"> 
+               <span id="span">hello_world!</span>
+               <span id="span">graphic_design</span>
+               <span id="span">@c0nme0mu</span>
+               <span id="span">for_arts_sake</span>
+               <img id="small" src="img/dada.png"> 
                
             </p>  
         </div>
     </section>
 </section>
+</div>
 
 </main>
-
 <footer>
-    <p>goodbye...!</p>
-</footer>
-
+  <div class="stock-ticker">
+    <ul aria-hidden="true">
+      <li>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+      </li>
+      <li>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+      </li>
+      <li>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+      </li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+      </li>
+      <li>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+      </li>
+      <li>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+          <span id="account">@nhetminh</span>
+      </li>
+    </ul>
+  </div>
+  </footer>
+  <div class="cows">
+  <img src="img/cows.gif" id="idk">
+</div>
 </body>
 </html>

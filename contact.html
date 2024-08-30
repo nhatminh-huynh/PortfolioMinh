@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--spin on scroll-->
+<div class="wrapper">
+        <div class="circle">
+            <img id="reload" src="img/hot-dog_1f32d.png" alt="scroll">
+        </div>
+</div>
+</div>
+<div id="fact">-->please hire me<--</div>
+<script>
+  document.getElementById("reload").onclick = function() {
+      var x = document.getElementById("fact")
+      if(x.style.opacity === "0") {
+      x.style.opacity = "100";
+    }
+    else {
+      x.style.opacity = "0";
+    }
+  }
+</script>
+<script src="main.js"></script>
+
+
+<main>
+  <div class="scrollbg">
+    <section>
+      <img src="img/asterisk.png" id="star4_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star5_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star6_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star7_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star8_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star9_home">
+    </section>
+  </div>
+  
+<script>
+window.onscroll = function () {
+    scrollRotate();
+};
+function scrollRotate() {
+    let image = document.getElementById("reload");
+    image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+
+  let section = document.getElementById("star4_home");
+  section.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section1 = document.getElementById("star5_home");
+  section1.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section2 = document.getElementById("star6_home");
+  section2.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section3 = document.getElementById("star7_home");
+  section3.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section4 = document.getElementById("star8_home");
+  section4.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section5 = document.getElementById("star9_home");
+  section5.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section6 = document.getElementById("star10_home");
+  section6.style.filter = "hue-rotate(" + window.pageYOffset + "deg)";
+}
+</script>
+<header>
+    <header>
+        <div class="navbar">
+          <div class="logo"><a href="index.html"><img src="img/logo.png" id="logomeo"></a></div>
+          <ul class="links">
+                <li id="dottextnav">
+                    <div class="dotnav3"></div>
+                    <a id="textnavbar" href="about.html">About</a>
+                  </li>
+              <li id="dottextnav">
+                <div class="dotnav1"></div>
+            <a id="textnavbar" href="archive.html">Projects</a>
+              </li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+            
+        <div class="dropdown_menu">
+            <li id="dottextnav">
+                <div class="dotnav3"></div>
+                <a id="textnavbar" href="about.html">About</a>
+              </li>
+          <li id="dottextnav">
+            <div class="dotnav1"></div>
+            <a id="textnavbar" href="archive.html">Projects</a>
+          </li>
+        </div>
+        </header>
+        
+        <script>
+          const toggleBtn = document.querySelector('.toggle_btn')
+          const toggleBtnIcon = document.querySelector('.toggle_btn i')
+          const dropDownMenu = document.querySelector('.dropdown_menu')
+        
+          toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+        
+          }
+        </script>
+</header>
+<!--change colors-->
+<div class="colorcirclefront"></div>
+<div class="colorcircle_prj"></div>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $(window).scroll(function(){
+        var $window = $(window),
+        $colorcircle = $('.colorcircle'),
+        $panel = $('.panel');
+
+        var scroll = $window.scrollTop() + ($window.height() / 3);
+        $panel.each(function (){
+            var $this = $(this);
+            if($this.position().top <= scroll &&
+        $this.position().top + $this.height() > scroll){
+            $colorcircle.removeClass(function (index,css){
+                return (css.match (/(^|\s)color-\S+/g) || []).join('');
+            });
+            $colorcircle.addClass('color-' + $(this).data('color'));
+        }
+        });
+    }).scroll();
+</script>
+<!---->
+<div class="alo">
+  <i id="j1">
+    <span id="gettoknow_contact"><i id="arrow">⤷</i> contact</span><br>
+    <div id="changetext_me">
+      <i id="blur">me:)</i>
+    </div>
+
+    <span id="gettoknow_via">via</span>
+  </i>
+</div>
+
+<div class="panel" data-color="">
+<img src="img/basket.png" id="basket">
+
+<section class="gridctct">
+  <div class="gmail">
+    <div id="tooltip_contact">
+      <span id="tooltipText_contact">huynhtrucnhatminh@gmail.com</span>
+      <a><img src="img/earp.png" id="lemon"></a>
+    </div>
+  </div>
+
+  <div class="linkedin">
+    <div id="tooltip_contact">
+      <span id="tooltipText_contact">LinkedIn</span>
+      <a href="https://www.linkedin.com/in/hu%E1%BB%B3nh-tr%C3%BAc-nh%E1%BA%ADt-minh-204400280/" target="_blank"><img src="img/money.png" id="orange"></a>
+    </div>
+  </div>
+
+  <div class="ig">
+      <div id="tooltip_contact">
+        <span id="tooltipText_contact">Instagram</span>
+        <a href="https://www.instagram.com/" target="_blank"><img src="img/pepperbell.png" id="apple_ig"></a>
+      </div>
+  </div>
+
+  <div class="fb">
+      <div id="tooltip_contact">
+        <span id="tooltipText_contact">Facebook</span>
+        <a href="https://www.facebook.com/" target="_blank"><img src="img/lap.png" id="watermelon"></a>
+      </div>
+  </div>
+
+  <div class="behance">
+      <div id="tooltip_contact">
+        <span id="tooltipText_contact">Behance</span>
+        <a href="https://www.behance.net/gallery/171818813/DIGITAL-CREATIVE-PORTFOLIO-2023" target="_blank"><img src="img/ip.png" id="grape"></a>
+      </div>
+  </div>
+
+</section>
+
+
+</div>
+
+
+<script>
+
+  document.getElementById("blur").onclick = function() {
+  var changeText = document.getElementById("blur")
+  
+    if (changeText.textContent == 'me:)') {
+       changeText.textContent = "minh";
+       changeText.style.color = "#ff20e1";
+   }
+    else if (changeText.textContent =='minh') {
+       changeText.textContent = "them";
+       changeText.style.color = "#ff20e1";
+   }
+   else if (changeText.textContent =='them') {
+       changeText.textContent = "her";
+       changeText.style.color = "#ff20e1";
+   }
+   else if (changeText.textContent =='her') {
+       changeText.textContent = "me:)";
+       changeText.style.color = "black";
+   }
+  
+  }
+  </script>
+</script>
+</main>
+<div class="cows">
+  <img src="img/cows.gif" id="idk">
+</div>
+</body>
+</html>

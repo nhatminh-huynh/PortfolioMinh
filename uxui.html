@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
+    <!--spin on scroll-->
+    <div class="wrapper">
+        <div class="circle">
+            <img id="reload" src="img/hot-dog_1f32d.png" alt="scroll">
+        </div>
+</div>
+      <div id="fact">-->please hire me<--</div>
+      <script>
+        document.getElementById("reload").onclick = function() {
+            var x = document.getElementById("fact")
+            if(x.style.opacity === "0") {
+            x.style.opacity = "100";
+          }
+          else {
+            x.style.opacity = "0";
+          }
+        }
+     </script>
+<script src="main.js"></script>
+<main>
+  <div class="scrollbg">
+    <section>
+      <img src="img/asterisk.png" id="star4_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star5_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star6_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star7_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star8_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star9_home">
+    </section>
+  </div>
+  
+<script>
+window.onscroll = function () {
+    scrollRotate();
+};
+function scrollRotate() {
+    let image = document.getElementById("reload");
+    image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+
+  let section = document.getElementById("star4_home");
+  section.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section1 = document.getElementById("star5_home");
+  section1.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section2 = document.getElementById("star6_home");
+  section2.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section3 = document.getElementById("star7_home");
+  section3.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section4 = document.getElementById("star8_home");
+  section4.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section5 = document.getElementById("star9_home");
+  section5.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section6 = document.getElementById("star10_home");
+  section6.style.filter = "hue-rotate(" + window.pageYOffset + "deg)";
+}
+</script>   
+    <header>
+        <div class="navbar">
+          <div class="logo"><a href="index.html"><img src="img/logo.png" id="logomeo"></a></div>
+            <ul class="links">
+              <li id="dottextnav">
+                <div class="dotnav3"></div>
+            <a id="textnavbar" href="about.html">About</a>
+              </li>
+              <li id="dottextnav">
+                <div class="dotnav2"></div>
+                <a id="textnavbar" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+            
+        <div class="dropdown_menu">
+          <li id="dottextnav">
+            <div class="dotnav3"></div>
+            <a id="textnavbar" href="about.html">About</a>
+          </li>
+          <li id="dottextnav">
+            <div class="dotnav2"></div>
+            <a id="textnavbar" href="contact.html">Contact</a>
+          </li>
+        </div>
+        </header>
+        <script>
+          const toggleBtn = document.querySelector('.toggle_btn')
+          const toggleBtnIcon = document.querySelector('.toggle_btn i')
+          const dropDownMenu = document.querySelector('.dropdown_menu')
+        
+          toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+        
+          }
+        </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(window).scroll(function(){
+            var $window = $(window),
+            $colorcircle = $('.colorcircle'),
+            $panel = $('.panel');
+    
+            var scroll = $window.scrollTop() + ($window.height() / 3);
+            $panel.each(function (){
+                var $this = $(this);
+                if($this.position().top <= scroll &&
+            $this.position().top + $this.height() > scroll){
+                $colorcircle.removeClass(function (index,css){
+                    return (css.match (/(^|\s)color-\S+/g) || []).join('');
+                });
+                $colorcircle.addClass('color-' + $(this).data('color'));
+            }
+            });
+        }).scroll();
+    </script>
+    
+    <div class="colorcircle"></div>
+
+    <div class="colorcircle"></div>
+
+<!--viewmore-->
+    <div>
+        <i id="j">
+            <span id="gettoknow_prj" class="viewmore">
+
+            <a id="view" href="archive.html">view more<i id="arrow">↗</i></a>
+        </span>
+          </i> 
+    </div>
+<!--GALLERY-->
+<div class="description">
+
+  <div class="abstract">
+    <h3><i id="arrow">↘</i> Our team has eventually decided to choose Music theme and make a huge event including lots of interactive activities for audience, and Loto is our main activity - Vietnamese bingo, is a beloved traditional game that has been enjoyed by Vietnamese people for generations. Our team chose this topic to make a website, that aims to capture the excitement of the Vietnamese loto show experience. On our website, you will have a chance to discover our lovely activities. Whether you're a seasoned player or new to the game, our website offers an engaging platform to help you get closer to our loto show. 
+    <br>🎫🎱🪗🏳️‍🌈🎤</h3>
+    <h4>Nhat Minh | Khanh An | Ton | Phuong Uyen | Cao Sang</h4>
+  </div>
+</div>
+
+
+<div class="containersushiplash">
+
+<div class="panel" data-color="white">
+  <div class="item">
+    <div class="item-img">
+       <img src="img/typo-melotody.png" id="button_melotody">
+       <img  src="img/homepage-test-01-01.png" alt=""/>
+    </div>   
+  </div>
+</div>
+
+<div class="panel" data-color="violet">
+  <div class="item">
+    <div class="item-img">
+       <img src="img/LOTOPIECE.gif" alt=""/>
+    </div>   
+  </div>
+</div>
+
+<div class="panel" data-color="white">
+  <div class="item">
+    <div class="item-img">
+       <img  src="img/13 LOTO.jpg" alt=""/>
+    </div>   
+  </div>
+</div>
+<div class="panel" data-color="violet">
+  <div class="item">
+      <div class="item-img">
+         <img  src="img/14 LOTO.jpg" alt=""/>
+      </div>   
+    </div>
+  </div>
+  <div class="panel" data-color="white">
+    <div class="item">
+      <div class="item-img">
+         <img  src="img/15 LOTO.jpg" alt=""/>
+      </div>   
+    </div>
+  </div>
+  <div class="panel" data-color="violet">
+    <div class="item">
+        <div class="item-img">
+           <img  src="img/16 LOTO.jpg" alt=""/>
+        </div>   
+      </div>
+    </div>
+    <div class="panel" data-color="white">
+      <div class="item">
+        <div class="item-img">
+           <img  src="img/15 LOTO.jpg" alt=""/>
+        </div>   
+      </div>
+    </div>
+  <div class="panel" data-color="violet">
+    <div class="item">
+      <div class="item-img_href">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ldlWdskrIsQ?si=xkm83A1jReH-kc_2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>   
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.12.2/intersection-observer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    const items = Array.from(document.querySelectorAll(".item"));
+
+    items.forEach((item) => {
+        const img = item.querySelector(".item-img");
+        gsap.set(img, {scale:0});
+    });
+
+    function setScale(){
+        items.forEach((item) => {
+            const img = item.querySelector(".item-img");
+            const rect = item.getBoundingClientRect();
+
+            const viewportHeight = window.innerHeight;
+            const itemCenter = rect.top + rect.height / 2;
+
+            const distanceFromCenter = Math.abs(viewportHeight / 2 - itemCenter);
+
+            const progress = distanceFromCenter / (viewportHeight / 2);
+
+            const adjustedProgress = Math.pow(progress, 2);
+
+            let scale = 1 - adjustedProgress * 0.5;
+            scale = Math.max(0, Math.min(scale,1));
+
+            gsap.to(img, {scale: scale, duration:0.1});
+        });
+    }
+
+    setScale();
+
+    window.addEventListener("scroll", setScale);
+    let scroll = 0;
+    let oldScrollY = 0;
+    let roundedScrollY = 0;
+    const lerpAmount = 0.1;
+
+    function lerp(start, end, t){
+        return start * (1 - t) + end * i;
+    }
+
+    function animate(){
+        requestAnimationFrame(animate);
+
+        roundedScrollY = lerp(roundedScrollY, scrollY, lerpAmount);
+
+        document.querySelector(".container").style.transform = 'translate3d(0, ${-roundedScrollY}px, 0)';
+
+        setScale();
+    }
+
+    window.addEventListener("scroll", (e) => {
+        scrollY = window.scrollY;
+    });
+
+    animate();
+</script>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--spin on scroll-->
+<div class="wrapper">
+        <div class="circle">
+            <img id="reload" src="img/hot-dog_1f32d.png" alt="scroll">
+        </div>
+</div>
+</div>
+<div id="fact">-->please hire me<--</div>
+<script>
+  document.getElementById("reload").onclick = function() {
+      var x = document.getElementById("fact")
+      if(x.style.opacity === "0") {
+      x.style.opacity = "100";
+    }
+    else {
+      x.style.opacity = "0";
+    }
+  }
+</script>
+<script src="main.js"></script>
+
+<main>
+  <div class="scrollbg">
+    <section>
+      <img src="img/asterisk.png" id="star4_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star5_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star6_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star7_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star8_home">
+    </section>
+    <section>
+      <img src="img/asterisk.png" id="star9_home">
+    </section>
+  </div>
+  
+<script>
+window.onscroll = function () {
+    scrollRotate();
+};
+function scrollRotate() {
+    let image = document.getElementById("reload");
+    image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+
+  let section = document.getElementById("star4_home");
+  section.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section1 = document.getElementById("star5_home");
+  section1.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section2 = document.getElementById("star6_home");
+  section2.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section3 = document.getElementById("star7_home");
+  section3.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section4 = document.getElementById("star8_home");
+  section4.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section5 = document.getElementById("star9_home");
+  section5.style.transform = "rotate(" + window.pageYOffset + "deg)";
+
+  let section6 = document.getElementById("star10_home");
+  section6.style.filter = "hue-rotate(" + window.pageYOffset + "deg)";
+}
+</script>
+
+    <header>
+        <div class="navbar">
+          <div class="logo"><a href="index.html"><img src="img/logo.png" id="logomeo"></a></div>
+          <ul class="links">
+              <li id="dottextnav">
+                <div class="dotnav3"></div>
+            <a id="textnavbar" href="about.html">About</a>
+              </li>
+              <li id="dottextnav">
+                <div class="dotnav2"></div>
+                <a id="textnavbar" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+            
+        <div class="dropdown_menu">
+          <li id="dottextnav">
+            <div class="dotnav3"></div>
+            <a id="textnavbar" href="about.html">About</a>
+          </li>
+          <li id="dottextnav">
+            <div class="dotnav2"></div>
+            <a id="textnavbar" href="contact.html">Contact</a>
+          </li>
+        </div>
+        </header>
+        
+        <script>
+          const toggleBtn = document.querySelector('.toggle_btn')
+          const toggleBtnIcon = document.querySelector('.toggle_btn i')
+          const dropDownMenu = document.querySelector('.dropdown_menu')
+        
+          toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+        
+          }
+        </script>
+
+</main>
+
+<!--change colors-->
+<div class="colorcirclefront"></div>
+<div class="colorcircle_prj"></div>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $(window).scroll(function(){
+        var $window = $(window),
+        $colorcircle = $('.colorcircle'),
+        $panel = $('.panel');
+
+        var scroll = $window.scrollTop() + ($window.height() / 3);
+        $panel.each(function (){
+            var $this = $(this);
+            if($this.position().top <= scroll &&
+        $this.position().top + $this.height() > scroll){
+            $colorcircle.removeClass(function (index,css){
+                return (css.match (/(^|\s)color-\S+/g) || []).join('');
+            });
+            $colorcircle.addClass('color-' + $(this).data('color'));
+        }
+        });
+    }).scroll();
+</script>
+<!---->
+
+<div class="panel" data-color="indigo">
+<section class="gridprj">
+  <div class="imgtxt">
+    <div id="tooltip">
+      <span id="tooltipText">7/2023</span>
+      <img id="image" src="img/image.png">
+    </div>
+    <a id="txt" href="mannequin.html">prj_mannequin.zip</a>
+  </div>  
+  <div class="imgtxt">
+    <div id="tooltip">
+      <span id="tooltipText">2023-2024</span>
+      <img id="image" src="img/image.png">
+    </div>
+    <a id="txt" href="3dmodelling.html">3d_modelling.zip</a>
+  </div> 
+  <div class="imgtxt">
+    <div id="tooltip">
+      <span id="tooltipText">2024</span>
+      <img id="image" src="img/image.png">
+    </div>
+    <a id="txt" href="experimental.html">experimental.zip</a>
+  </div> 
+  <div class="imgtxt">
+    <div id="tooltip">
+      <span id="tooltipText">4/2024</span>
+      <img id="image" src="img/image.png">
+    </div>
+    <a id="txt" href="sushiplash.html">sushi_plash.zip</a>
+  </div> 
+  <div class="imgtxt">
+    <div id="tooltip">
+      <span id="tooltipText">5/2024</span>
+      <img id="image" src="img/image.png">
+    </div>
+    <a id="txt" href="uxui.html">ux/ui.zip</a>
+  </div> 
+
+
+<div id="word">
+  <div id="intro1">
+
+    <i id="j1">
+      <span id="gettoknow"><i id="arrow">⤷</i>
+      projects by</span>
+    </i>  
+  <div id="changetext1">
+    <i id="blur">me:)</i>
+  </div>
+  <img src="img/star.gif" id="smallabout1">
+</div>
+</section>
+</div>
+<script>
+  document.getElementById("blur").onclick = function() {
+  var changeText = document.getElementById("blur")
+  
+    if (changeText.textContent == 'me:)') {
+       changeText.textContent = "minh";
+       changeText.style.color = "#ff20e1";
+   }
+    else if (changeText.textContent =='minh') {
+       changeText.textContent = "them";
+       changeText.style.color = "#ff20e1";
+   }
+   else if (changeText.textContent =='them') {
+       changeText.textContent = "her";
+       changeText.style.color = "#ff20e1";
+   }
+   else if (changeText.textContent =='her') {
+       changeText.textContent = "me:)";
+       changeText.style.color = "black";
+   }
+  
+  }
+  </script>
+
+</body>
+
+</html>
